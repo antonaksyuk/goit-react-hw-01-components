@@ -6,7 +6,7 @@ export default function Statistics({ data }) {
         <h2 className={style.title}>Upload stats</h2>
         <ul className={style.statList}>
             {data.map(item => {
-                return <li key={item.id} className={style.statlistItem}>
+                return <li key={item.id} className={style.statlistItem} style={{backgroundColor: getRandomHexColor()}}>
                     <span className={style.label}>{item.label}</span>
                     <br/>
                     <span className={style.percentage}>{item.percentage} %</span>
@@ -15,6 +15,10 @@ export default function Statistics({ data }) {
         </ul>
     </section>
     );
+}
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
 Statistics.propTypes = {
