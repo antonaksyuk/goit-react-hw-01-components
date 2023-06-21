@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-
 export function TransactionHistoryItem({ type, amount, currency }) {
   return (
     <tr>

@@ -5,32 +5,32 @@ import style from './Profile.module.css'
 export default function Profile({ username, tag, location, avatar, stats }) {
     return (
         <div className={style.profile}>
-            <div className="description">
+            <div className={style.description}>
                 <img
                     src={avatar}
                     alt={username}
-                    className={avatar}
+                    className={style.avatar}
                 />
-                <p >{username}</p>
-                <p>@{tag}</p>
-                <p>{location}</p>
+                <p className={style.avatarItem}>{username}</p>
+                <p className={style.avatarItem}>@{tag}</p>
+                <p className={style.avatarItem}>{location}</p>
             </div>
 
             <ul className={style.list}>
-                <li>
-                    <span className="label">Followers</span>
+                <li className={style.listItem}>
+                    <span className={style.label}>Followers</span>
                     <br />
-                    <span className="quantity">{stats.followers}</span>
+                    <span className={style.quantity}>{stats.followers}</span>
                 </li>
-                <li>
-                    <span className="label">Views</span>
+                <li className={style.listItem}>
+                    <span className={style.label}>Views</span>
                     <br />
-                    <span className="quantity">{stats.views}</span>
+                    <span className={style.quantity}>{stats.views}</span>
                 </li>
-                <li>
-                    <span className="label">Likes</span>
+                <li className={style.listItem}>
+                    <span className={style.label}>Likes</span>
                     <br />
-                    <span className="quantity">{stats.likes}</span>
+                    <span className={style.quantity}>{stats.likes}</span>
                 </li>
             </ul>
         </div>

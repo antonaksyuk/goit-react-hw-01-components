@@ -1,0 +1,19 @@
+.table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 316px;
+}
+
+th,
+td{
+    text-align: center;
+    border: 1px dashed black;
+}
+
+th{
+    background-color: aqua;
+}
+
+tr:hover{
+    background-color: yellowgreen;
+}

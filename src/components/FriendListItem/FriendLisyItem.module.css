@@ -1,9 +1,29 @@
+.item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 306px;
+    height: auto;
+    padding: 5px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    background-color: wheat;
+    border-radius: 4px;
+}
+
+
 .isOnline {
-background-color: green;
+    background-color: green;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .isOffline {
     background-color: red;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .point {
@@ -12,3 +32,4 @@ background-color: green;
     width: 10px;
     border-radius: 50%;
 }
+

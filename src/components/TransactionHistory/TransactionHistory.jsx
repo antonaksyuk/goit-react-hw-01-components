@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import { TransactionHistoryItem } from '../TransactionHistoryItem/TransactionHistoryItem.jsx';
+import style from './TransactionHistory.module.css'
 
 export default function TransactionHistory({ items }) {
-    // console.log(items)
-    return (<table>
-        <thead>
-            <tr>
+    return (
+    <table className={style.table}>
+        <thead >
+            <tr >
                 <th>Type</th>
                 <th>Amount</th>
                 <th>Currency</th>
@@ -18,7 +19,8 @@ export default function TransactionHistory({ items }) {
                 />
             ))}
         </tbody>
-    </table>);
+        </table>
+       );
 }
 
 TransactionHistory.propTypes = {
@@ -31,9 +33,3 @@ TransactionHistory.propTypes = {
         })
     ),
 };
-// TransactionHistory.propTypes = {
-//     // id: PropTypes.string.isRequired,
-//     // type: PropTypes.string.isRequired,
-//     // amount: PropTypes.number.isRequired,
-//     // currency: PropTypes.number.isRequired,
-// }
