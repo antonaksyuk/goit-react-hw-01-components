@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import style from './Statistic.module.css'; 
 
-export default function Statistics({ data }) {
+export default function Statistics({ data, title }) {
     return (<section className={style.statistics}>
-        <h2 className={style.title}>Upload stats</h2>
+        {title && <h2 className={style.title}>{title}</h2>}
         <ul className={style.statList}>
             {data.map(item => {
-                return <li key={item.id} className={style.statlistItem} style={{backgroundColor: getRandomHexColor()}}>
+                return <li key={item.id} className={style.statlistItem} style={{ backgroundColor: getRandomHexColor() }}>
                     <span className={style.label}>{item.label}</span>
-                    <br/>
+                    <br />
                     <span className={style.percentage}>{item.percentage} %</span>
                 </li>
             })}
